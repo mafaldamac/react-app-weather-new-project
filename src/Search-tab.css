@@ -8,4 +8,7 @@
 }
 .btn btn-outline-warning {
   font-size: 18px;
+  text-align: center;
+  margin: 0% auto;
+  color: gray;
 }

@@ -15,19 +15,18 @@ export default function Search(props) {
     <div>
       <form onSubmit={submitForm}>
         <input
-          className="form-control"
+          class="form-control"
+          id="search"
           type="search"
           placeholder="Write the city name here and press Enter key or Search"
           onChange={updateCityValue}
         />
-        <button
+        <input
           type="submit"
           className="btn btn-outline-warning"
           value="Search"
           id="search-button"
-        >
-          Search
-        </button>
+        />
       </form>
     </div>
   );
