@@ -1,0 +1,11 @@
+.form-control {
+  font-size: 18px;
+  font-weight: 70;
+  margin: 20px 0 0 0;
+  line-height: 50px;
+  color: black;
+  text-align: center;
+}
+.btn btn-outline-warning {
+  font-size: 18px;
+}

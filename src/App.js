@@ -3,7 +3,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Weather from "./Weather";
 import Search from "./Search-tab";
-import Forecast from "./Forecast";
 import axios from "axios";
 
 export default function App() {
@@ -28,39 +27,36 @@ export default function App() {
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
       );
     });
-    return (
-      <div className="App">
-        <div className="container">
-          <h1>Weather App</h1>
-          <br />
-          <div>
-            <Search onSearch={searchCity} />
-          </div>
-          <br />
-          <div>
-            <Weather
-              temperature={temperature}
-              city={city}
-              wind={wind}
-              humidity={humidity}
-              description={description}
-              iconUrl={iconUrl}
-            />
-          </div>
-          <br />
-          <div>
-            <Forecast />
-          </div>
-          <br />
-          <footer>
-            This project was coded by Mafalda Lourenço and is
-            <a href="https://github.com/mafaldamac/react-app-weather-new-project/">
-              {" "}
-              open-source on Github{" "}
-            </a>
-          </footer>
-        </div>
-      </div>
-    );
   };
+  return (
+    <div className="App">
+      <div className="container">
+        <h1>Weather App</h1>
+        <br />
+        <div>
+          <Search onSearch={searchCity} />
+        </div>
+        <br />
+        <div>
+          <Weather
+            temperature={temperature}
+            city={city}
+            wind={wind}
+            humidity={humidity}
+            description={description}
+            iconUrl={iconUrl}
+          />
+        </div>
+
+        <br />
+        <footer>
+          This project was coded by Mafalda Lourenço and is
+          <a href="https://github.com/mafaldamac/react-app-weather-new-project/">
+            {" "}
+            open-source on Github{" "}
+          </a>
+        </footer>
+      </div>
+    </div>
+  );
 }

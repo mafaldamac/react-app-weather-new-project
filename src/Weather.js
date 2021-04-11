@@ -18,11 +18,10 @@ export default function Weather(props) {
     <div className="Weather">
       <div class="container">
         <div class="row align-items-start">
-          <div class="col">Date</div>
-          <div class="col">{props.iconUrl}</div>
-          <div class="col">{temperature}</div>
-          <span className="TempUnits">
-            {" "}
+          <div className="col">11 Abril 2021</div>
+          <div className="col">{props.city}</div>
+          <div className="col">
+            {temperature}{" "}
             <a href="./" onClick={showCelsius} id="celsius-link">
               ºC
             </a>{" "}
@@ -30,17 +29,19 @@ export default function Weather(props) {
             <a href="./" onClick={showFarehrenheit} id="fahrenheit-link">
               ºF
             </a>
-          </span>
+          </div>
         </div>
         <div class="row align-items-center">
-          <div class="col">Hour</div>
-          <div class="col">{props.description}</div>
-          <div class="col">{props.humidity}</div>
+          <div className="col">12:00</div>
+          <div className="col">
+            <img src={props.iconUrl} alt="icon" />
+          </div>
+          <div className="col">{props.humidity} % Humidity </div>
         </div>
         <div class="row align-items-end">
-          <div class="col">{props.city}</div>
-          <div class="col">blablabla</div>
-          <div class="col">{props.wind}</div>
+          <div className="col"></div>
+          <div class="col">{props.description}</div>
+          <div className="col">{props.wind} Km/h Wind-speed </div>
         </div>
       </div>
     </div>

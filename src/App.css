@@ -1,0 +1,19 @@
+.App {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.App footer {
+  font-size: 11px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.App h1 {
+  font-size: 50px;
+  font-weight: 70;
+  margin: 20px 0 0 0;
+  line-height: 50px;
+  color: black;
+  text-align: center;
+}
