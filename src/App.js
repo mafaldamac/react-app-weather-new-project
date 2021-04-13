@@ -12,7 +12,7 @@ export default function App() {
   let [humidity, setHumidity] = useState(``);
   let [description, setDescription] = useState(``);
   let [iconUrl, setIconUrl] = useState(``);
-  let [date, setDate] = useState(``);
+  let [date, setDate] = useState(new Date());
 
   const searchCity = (cityName) => {
     setCity(cityName);
@@ -27,7 +27,7 @@ export default function App() {
       setIconUrl(
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
       );
-      setDate(response.data.dt * 1000);
+      setDate(new Date(response.data.dt * 1000));
     });
   };
   return (
