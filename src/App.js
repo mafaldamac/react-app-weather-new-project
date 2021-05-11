@@ -41,6 +41,7 @@ export default function App() {
         <br />
         <div>
           <Weather
+            defaultCity="Lisbon"
             temperature={temperature}
             city={city}
             wind={wind}
@@ -53,7 +54,7 @@ export default function App() {
 
         <br />
         <footer>
-          This project was coded by Mafalda Lourenço and is
+          This project was coded by Mafalda Lourenço
           <a href="https://github.com/mafaldamac/react-app-weather-new-project/">
             {" "}
             open-source on Github{" "}

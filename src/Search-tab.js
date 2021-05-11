@@ -4,8 +4,7 @@ import "./Search-tab.css";
 export default function Search(props) {
   let [city, setCity] = useState("");
 
-  function submitForm(event) {
-    event.preventDefault();
+  function submitForm(props) {
     props.onSearch(city);
   }
   function updateCityValue(event) {
