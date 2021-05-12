@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Weather.css";
 
 export default function Weather(props) {
   let [temperature, setTemperature] = useState(props.temperature);
+
+  useEffect(() => {
+    setTemperature(props.temperature);
+  }, [props.temperature]);
 
   function showFarehrenheit(event) {
     event.preventDefault();

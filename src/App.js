@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Weather from "./Weather";
@@ -6,13 +6,18 @@ import Search from "./Search-tab";
 import axios from "axios";
 
 export default function App() {
-  let [city, setCity] = useState(``);
+  let [city, setCity] = useState(null);
   let [temperature, setTemperature] = useState(``);
   let [wind, setWind] = useState(``);
   let [humidity, setHumidity] = useState(``);
   let [description, setDescription] = useState(``);
   let [iconUrl, setIconUrl] = useState(``);
   let [date, setDate] = useState(new Date());
+  useEffect(() => {
+    if (!city) {
+      searchCity("Lisbon");
+    }
+  }, []);
 
   const searchCity = (cityName) => {
     setCity(cityName);
