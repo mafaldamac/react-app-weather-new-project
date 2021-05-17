@@ -14,16 +14,14 @@ export default function App() {
   let [iconUrl, setIconUrl] = useState(``);
   let [date, setDate] = useState(new Date());
   useEffect(() => {
-    if (!city) {
-      searchCity("Lisbon");
-    }
-  }, []);
+    searchCity("lisbon");
+  }, [React]);
 
-  const searchCity = (city) => {
-    setCity(city);
+  const searchCity = (cityName) => {
+    setCity(cityName);
     const apiKey = "be65b4815a4ad8711d696d04653d1f47";
     const units = "metric";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
     axios.get(url).then((response) => {
       setTemperature(Math.round(response.data.main.temp));
       setWind(Math.round(response.data.wind.speed));
