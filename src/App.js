@@ -14,8 +14,10 @@ export default function App() {
   let [iconUrl, setIconUrl] = useState(``);
   let [date, setDate] = useState(new Date());
   useEffect(() => {
-    searchCity("lisbon");
-  }, [React]);
+    if (!city) {
+      searchCity("lisbon");
+    }
+  }, [city]);
 
   const searchCity = (cityName) => {
     setCity(cityName);
