@@ -60,12 +60,12 @@ export default function Weather(props) {
 
   return (
     <div className="Weather">
-      <div class="container">
-        <div class="row align-items-start">
+      <div className="container">
+        <div className="row align-items-start">
           <div className="col">
             {" "}
             <div className="col">
-              {showDate(props).month} {showDate(props).dayNumber}
+              {showDate(props).dayNumber} of {showDate(props).month}
             </div>{" "}
           </div>
           <div className="col">{props.city}</div>
@@ -80,18 +80,18 @@ export default function Weather(props) {
             </a>
           </div>
         </div>
-        <div class="row align-items-center">
+        <div className="row align-items-center">
           <div className="col">{showDate(props).day}</div>
           <div className="col">
             <img src={props.iconUrl} alt="icon" />
           </div>
           <div className="col">{props.humidity} % Humidity </div>
         </div>
-        <div class="row align-items-end">
+        <div className="row align-items-end">
           <div className="col">
             {showDate(props).hours}:{showDate(props).minutes}
           </div>
-          <div class="col">{props.description}</div>
+          <div className="col">{props.description}</div>
           <div className="col">{props.wind} Km/h Wind-speed </div>
         </div>
       </div>

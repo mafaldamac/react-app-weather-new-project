@@ -1,0 +1,11 @@
+.WeatherForecast {
+  border: 1px solid #dadde1;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 18px;
+  font-weight: lighter;
+  margin: 3px;
+  text-align: center;
+  box-shadow: 5px 5px #e7e7de;
+}

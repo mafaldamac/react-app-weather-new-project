@@ -15,7 +15,7 @@ export default function Search(props) {
     <div>
       <form onSubmit={submitForm}>
         <input
-          class="form-control"
+          className="form-control"
           id="search"
           type="search"
           placeholder="Write the city name here and press Enter key or Search"
